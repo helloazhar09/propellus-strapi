@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_mainheading_mainheadings",
+  "info": {
+    "displayName": "mainheading"
+  },
+  "options": {},
+  "attributes": {
+    "mainheading": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

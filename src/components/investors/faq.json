@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_investors_faqs",
+  "info": {
+    "displayName": "FAQ"
+  },
+  "options": {},
+  "attributes": {
+    "heading1": {
+      "type": "string",
+      "required": false
+    },
+    "heading2": {
+      "type": "string",
+      "required": false
+    },
+    "Question": {
+      "type": "string",
+      "required": false
+    },
+    "Answer": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

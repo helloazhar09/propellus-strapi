@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_investors_investorsforms",
+  "info": {
+    "displayName": "investorsform"
+  },
+  "options": {},
+  "attributes": {
+    "heading1": {
+      "type": "string",
+      "required": true
+    },
+    "heading2": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

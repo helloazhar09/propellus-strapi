@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_landing_page_herosections",
+  "info": {
+    "displayName": "herosection"
+  },
+  "options": {},
+  "attributes": {
+    "heading1": {
+      "type": "string",
+      "required": true
+    },
+    "heading2": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

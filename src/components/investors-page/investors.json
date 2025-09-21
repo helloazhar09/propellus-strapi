@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_investors_page_investors",
+  "info": {
+    "displayName": "investors"
+  },
+  "options": {},
+  "attributes": {
+    "approach": {
+      "type": "component",
+      "component": "investors-page.approach-section",
+      "repeatable": true
+    },
+    "investorssection": {
+      "type": "component",
+      "component": "investors-page.investors-section",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

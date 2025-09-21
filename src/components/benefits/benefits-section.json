@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_benefits_benefits_sections",
+  "info": {
+    "displayName": "BenefitsSection"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "subheading1": {
+      "type": "string",
+      "required": true
+    },
+    "subdescription1": {
+      "type": "text",
+      "required": true
+    },
+    "subheading2": {
+      "type": "string",
+      "required": true
+    },
+    "subdescription2": {
+      "type": "string",
+      "required": true
+    },
+    "subheading3": {
+      "type": "string",
+      "required": true
+    },
+    "subdescription3": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

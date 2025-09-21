@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_landing_page_travellers_loves",
+  "info": {
+    "displayName": "travellers-love"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "author_name": {
+      "type": "string",
+      "required": true
+    },
+    "country_name": {
+      "type": "string",
+      "required": true
+    },
+    "author_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

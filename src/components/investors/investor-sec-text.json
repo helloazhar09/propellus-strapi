@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_investors_investor_sec_texts",
+  "info": {
+    "displayName": "investor-sec-text"
+  },
+  "options": {},
+  "attributes": {
+    "heading1": {
+      "type": "string",
+      "required": true
+    },
+    "heading2": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "investors",
+  "info": {
+    "singularName": "investor",
+    "pluralName": "investors",
+    "displayName": "investor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "investorsHero": {
+      "type": "component",
+      "component": "hero-section.hero",
+      "repeatable": false
+    },
+    "approach": {
+      "type": "component",
+      "component": "investor-approach.approachsection",
+      "repeatable": false,
+      "required": true
+    },
+    "investorsheading": {
+      "type": "component",
+      "component": "investors.investor-sec-text",
+      "repeatable": true
+    },
+    "investor": {
+      "type": "component",
+      "component": "investors-page.investors-section",
+      "repeatable": true,
+      "required": true
+    },
+    "form": {
+      "type": "component",
+      "component": "investors.investorsform",
+      "repeatable": false
+    }
+  }
+}

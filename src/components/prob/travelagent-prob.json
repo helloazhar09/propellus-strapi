@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_prob_travelagent_probs",
+  "info": {
+    "displayName": "travelagentProb"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "subheading1": {
+      "type": "string",
+      "required": true
+    },
+    "description1": {
+      "type": "text",
+      "required": true
+    },
+    "subheading2": {
+      "type": "string",
+      "required": true
+    },
+    "description2": {
+      "type": "text",
+      "required": true
+    },
+    "subheading3": {
+      "type": "string",
+      "required": true
+    },
+    "description3": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

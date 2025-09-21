@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "landing page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "herosection": {
+      "type": "component",
+      "component": "landing-page.herosection",
+      "repeatable": false
+    },
+    "visasection": {
+      "type": "component",
+      "component": "landing-page.visasection",
+      "repeatable": false
+    },
+    "grow": {
+      "type": "component",
+      "component": "landing-page.grow-your-business-section",
+      "repeatable": true
+    },
+    "otas": {
+      "type": "component",
+      "component": "landing-page.otas-service",
+      "repeatable": true,
+      "required": true
+    },
+    "travllerslove": {
+      "type": "component",
+      "component": "landing-page.travellers-love",
+      "repeatable": true
+    }
+  }
+}

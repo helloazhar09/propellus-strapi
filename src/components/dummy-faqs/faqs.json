@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_dummy_faqs_faqs",
+  "info": {
+    "displayName": "FAQS"
+  },
+  "options": {},
+  "attributes": {
+    "Qestion": {
+      "type": "string",
+      "required": true
+    },
+    "Answer": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}

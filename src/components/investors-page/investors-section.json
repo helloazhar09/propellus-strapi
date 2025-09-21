@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_investors_page_investors_sections",
+  "info": {
+    "displayName": "investors-section"
+  },
+  "options": {},
+  "attributes": {
+    "profile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "author_name": {
+      "type": "string",
+      "required": true
+    },
+    "author_info": {
+      "type": "blocks",
+      "required": true
+    },
+    "linkedIn_url": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

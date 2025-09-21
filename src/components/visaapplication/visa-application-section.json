@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_visaapplication_visa_application_sections",
+  "info": {
+    "displayName": "visaApplicationSection"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
