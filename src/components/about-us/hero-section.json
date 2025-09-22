@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_about_us_hero_sections",
+  "info": {
+    "displayName": "hero-section"
+  },
+  "options": {},
+  "attributes": {
+    "aboutUs_heading": {
+      "type": "string",
+      "required": true
+    },
+    "aboutUs_intro": {
+      "type": "blocks",
+      "required": true
+    },
+    "aboutUs_Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

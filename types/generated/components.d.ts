@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutUsHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_hero_sections';
+  info: {
+    displayName: 'hero-section';
+  };
+  attributes: {
+    aboutUs_heading: Schema.Attribute.String & Schema.Attribute.Required;
+    aboutUs_Image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+    aboutUs_intro: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface BenefitsBenefitsSection extends Struct.ComponentSchema {
   collectionName: 'components_benefits_benefits_sections';
   info: {
@@ -249,6 +264,51 @@ export interface MainheadingMainheading extends Struct.ComponentSchema {
   };
 }
 
+export interface MeetTheTeamMeetTheTeam extends Struct.ComponentSchema {
+  collectionName: 'components_meet_the_team_meet_the_teams';
+  info: {
+    displayName: 'meet the team';
+  };
+  attributes: {
+    designation: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface MissionSectionMissionSection extends Struct.ComponentSchema {
+  collectionName: 'components_mission_section_mission_sections';
+  info: {
+    displayName: 'mission-section';
+  };
+  attributes: {
+    desc: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heading: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface MissionVisionMissionVisionSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_mission_vision_mission_vision_sections';
+  info: {
+    displayName: 'mission_vision_section';
+  };
+  attributes: {
+    desc: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface ProbTravelagentProb extends Struct.ComponentSchema {
   collectionName: 'components_prob_travelagent_probs';
   info: {
@@ -264,6 +324,17 @@ export interface ProbTravelagentProb extends Struct.ComponentSchema {
     subheading1: Schema.Attribute.String & Schema.Attribute.Required;
     subheading2: Schema.Attribute.String & Schema.Attribute.Required;
     subheading3: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface TermsSection extends Struct.ComponentSchema {
+  collectionName: 'components_terms_sections';
+  info: {
+    displayName: 'section';
+  };
+  attributes: {
+    section_detail: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    section_heading: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -340,9 +411,24 @@ export interface VisaapplicationVisaApplicationSection
   };
 }
 
+export interface VisionSectionVisionSection extends Struct.ComponentSchema {
+  collectionName: 'components_vision_section_vision_sections';
+  info: {
+    displayName: 'vision_section';
+  };
+  attributes: {
+    desc: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heading: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about-us.hero-section': AboutUsHeroSection;
       'benefits.benefits-section': BenefitsBenefitsSection;
       'dummy-faqs.faqs': DummyFaqsFaqs;
       'feature.feature-section': FeatureFeatureSection;
@@ -362,12 +448,17 @@ declare module '@strapi/strapi' {
       'landing-page.travellers-love': LandingPageTravellersLove;
       'landing-page.visasection': LandingPageVisasection;
       'mainheading.mainheading': MainheadingMainheading;
+      'meet-the-team.meet-the-team': MeetTheTeamMeetTheTeam;
+      'mission-section.mission-section': MissionSectionMissionSection;
+      'mission-vision.mission-vision-section': MissionVisionMissionVisionSection;
       'prob.travelagent-prob': ProbTravelagentProb;
+      'terms.section': TermsSection;
       'travelagent-prob.travelagent-prob': TravelagentProbTravelagentProb;
       'travelagentlove.travelagentlove': TravelagentloveTravelagentlove;
       'travelagentsol.travelagentsolution': TravelagentsolTravelagentsolution;
       'visa-process.visaprocess': VisaProcessVisaprocess;
       'visaapplication.visa-application-section': VisaapplicationVisaApplicationSection;
+      'vision-section.vision-section': VisionSectionVisionSection;
     }
   }
 }

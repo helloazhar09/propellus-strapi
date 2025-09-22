@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_mission_vision_mission_vision_sections",
+  "info": {
+    "displayName": "mission_vision_section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "blocks",
+      "required": true
+    },
+    "desc": {
+      "type": "blocks",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_terms_sections",
+  "info": {
+    "displayName": "section"
+  },
+  "options": {},
+  "attributes": {
+    "section_heading": {
+      "type": "string",
+      "required": true
+    },
+    "section_detail": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}
