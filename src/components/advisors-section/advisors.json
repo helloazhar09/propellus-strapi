@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_advisors_section_advisors",
+  "info": {
+    "displayName": "advisors"
+  },
+  "options": {},
+  "attributes": {
+    "advisors_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "advisor_title": {
+      "type": "string",
+      "required": true
+    },
+    "advisor_des": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

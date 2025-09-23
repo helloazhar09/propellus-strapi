@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_value_slides_slides",
+  "info": {
+    "displayName": "slides"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}

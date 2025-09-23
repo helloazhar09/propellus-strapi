@@ -15,6 +15,21 @@ export interface AboutUsHeroSection extends Struct.ComponentSchema {
   };
 }
 
+export interface AdvisorsSectionAdvisors extends Struct.ComponentSchema {
+  collectionName: 'components_advisors_section_advisors';
+  info: {
+    displayName: 'advisors';
+  };
+  attributes: {
+    advisor_des: Schema.Attribute.String & Schema.Attribute.Required;
+    advisor_title: Schema.Attribute.String & Schema.Attribute.Required;
+    advisors_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface BenefitsBenefitsSection extends Struct.ComponentSchema {
   collectionName: 'components_benefits_benefits_sections';
   info: {
@@ -254,6 +269,24 @@ export interface LandingPageVisasection extends Struct.ComponentSchema {
   };
 }
 
+export interface LogosLogos extends Struct.ComponentSchema {
+  collectionName: 'components_logos_logos';
+  info: {
+    displayName: 'logos';
+  };
+  attributes: {
+    logo1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    logo2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    logo3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    logo4: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface MainheadingMainheading extends Struct.ComponentSchema {
   collectionName: 'components_mainheading_mainheadings';
   info: {
@@ -309,6 +342,24 @@ export interface MissionVisionMissionVisionSection
   };
 }
 
+export interface OurTeamAndAdvisorsOurTeamAndAdvisors
+  extends Struct.ComponentSchema {
+  collectionName: 'components_our_team_and_advisors_our_team_and_advisors';
+  info: {
+    displayName: 'our_team_and_advisors';
+  };
+  attributes: {
+    advisor_heading: Schema.Attribute.String & Schema.Attribute.Required;
+    advisors: Schema.Attribute.Component<'advisors-section.advisors', true> &
+      Schema.Attribute.Required;
+    intro: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    team_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface ProbTravelagentProb extends Struct.ComponentSchema {
   collectionName: 'components_prob_travelagent_probs';
   info: {
@@ -324,6 +375,35 @@ export interface ProbTravelagentProb extends Struct.ComponentSchema {
     subheading1: Schema.Attribute.String & Schema.Attribute.Required;
     subheading2: Schema.Attribute.String & Schema.Attribute.Required;
     subheading3: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface RoadmapSlidesSlides extends Struct.ComponentSchema {
+  collectionName: 'components_roadmap_slides_slides';
+  info: {
+    displayName: 'slides';
+  };
+  attributes: {
+    desc: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface RoadmapRoadmapSection extends Struct.ComponentSchema {
+  collectionName: 'components_roadmap_roadmap_sections';
+  info: {
+    displayName: 'roadmap_section';
+  };
+  attributes: {
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    roadmap_slides: Schema.Attribute.Component<'roadmap-slides.slides', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -382,6 +462,57 @@ export interface TravelagentsolTravelagentsolution
   };
 }
 
+export interface ValueSlidesSlides extends Struct.ComponentSchema {
+  collectionName: 'components_value_slides_slides';
+  info: {
+    displayName: 'slides';
+  };
+  attributes: {
+    desc: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ValueSlidesValueSlides extends Struct.ComponentSchema {
+  collectionName: 'components_value_slides_value_slides';
+  info: {
+    displayName: 'value-slides';
+  };
+  attributes: {
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ValueValueSection extends Struct.ComponentSchema {
+  collectionName: 'components_value_value_sections';
+  info: {
+    displayName: 'value_section';
+  };
+  attributes: {
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    value_slides: Schema.Attribute.Component<'value-slides.slides', true> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ValuesCreatingPropellusValues extends Struct.ComponentSchema {
+  collectionName: 'components_values_creating_propellus_values';
+  info: {
+    displayName: 'creating_propellus_values';
+  };
+  attributes: {
+    desc: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface VisaProcessVisaprocess extends Struct.ComponentSchema {
   collectionName: 'components_visa_process_visaprocesses';
   info: {
@@ -429,6 +560,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'about-us.hero-section': AboutUsHeroSection;
+      'advisors-section.advisors': AdvisorsSectionAdvisors;
       'benefits.benefits-section': BenefitsBenefitsSection;
       'dummy-faqs.faqs': DummyFaqsFaqs;
       'feature.feature-section': FeatureFeatureSection;
@@ -447,15 +579,23 @@ declare module '@strapi/strapi' {
       'landing-page.otas-service': LandingPageOtasService;
       'landing-page.travellers-love': LandingPageTravellersLove;
       'landing-page.visasection': LandingPageVisasection;
+      'logos.logos': LogosLogos;
       'mainheading.mainheading': MainheadingMainheading;
       'meet-the-team.meet-the-team': MeetTheTeamMeetTheTeam;
       'mission-section.mission-section': MissionSectionMissionSection;
       'mission-vision.mission-vision-section': MissionVisionMissionVisionSection;
+      'our-team-and-advisors.our-team-and-advisors': OurTeamAndAdvisorsOurTeamAndAdvisors;
       'prob.travelagent-prob': ProbTravelagentProb;
+      'roadmap-slides.slides': RoadmapSlidesSlides;
+      'roadmap.roadmap-section': RoadmapRoadmapSection;
       'terms.section': TermsSection;
       'travelagent-prob.travelagent-prob': TravelagentProbTravelagentProb;
       'travelagentlove.travelagentlove': TravelagentloveTravelagentlove;
       'travelagentsol.travelagentsolution': TravelagentsolTravelagentsolution;
+      'value-slides.slides': ValueSlidesSlides;
+      'value-slides.value-slides': ValueSlidesValueSlides;
+      'value.value-section': ValueValueSection;
+      'values.creating-propellus-values': ValuesCreatingPropellusValues;
       'visa-process.visaprocess': VisaProcessVisaprocess;
       'visaapplication.visa-application-section': VisaapplicationVisaApplicationSection;
       'vision-section.vision-section': VisionSectionVisionSection;

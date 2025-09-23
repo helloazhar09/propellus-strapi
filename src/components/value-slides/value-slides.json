@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_value_slides_value_slides",
+  "info": {
+    "displayName": "value-slides"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

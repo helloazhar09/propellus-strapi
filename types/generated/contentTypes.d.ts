@@ -391,12 +391,18 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    creatingPropellusValues: Schema.Attribute.Component<
+      'values.creating-propellus-values',
+      true
+    > &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::about-us.about-us'
     > &
       Schema.Attribute.Private;
+    logos: Schema.Attribute.Component<'logos.logos', false>;
     meet_the_team: Schema.Attribute.Component<
       'meet-the-team.meet-the-team',
       true
@@ -406,10 +412,19 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
       'mission-section.mission-section',
       true
     >;
+    our_team_and_advisors: Schema.Attribute.Component<
+      'our-team-and-advisors.our-team-and-advisors',
+      false
+    > &
+      Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    roadmap: Schema.Attribute.Component<'roadmap.roadmap-section', true> &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    value: Schema.Attribute.Component<'value.value-section', true> &
+      Schema.Attribute.Required;
     vision_section: Schema.Attribute.Component<
       'vision-section.vision-section',
       true

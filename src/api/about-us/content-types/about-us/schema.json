@@ -33,6 +33,35 @@
       "component": "meet-the-team.meet-the-team",
       "repeatable": true,
       "required": true
+    },
+    "our_team_and_advisors": {
+      "type": "component",
+      "component": "our-team-and-advisors.our-team-and-advisors",
+      "repeatable": false,
+      "required": true
+    },
+    "value": {
+      "type": "component",
+      "component": "value.value-section",
+      "repeatable": true,
+      "required": true
+    },
+    "roadmap": {
+      "type": "component",
+      "component": "roadmap.roadmap-section",
+      "repeatable": true,
+      "required": true
+    },
+    "creatingPropellusValues": {
+      "type": "component",
+      "component": "values.creating-propellus-values",
+      "repeatable": true,
+      "required": true
+    },
+    "logos": {
+      "type": "component",
+      "component": "logos.logos",
+      "repeatable": false
     }
   }
 }
