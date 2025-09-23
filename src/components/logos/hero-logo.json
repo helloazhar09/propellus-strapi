@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_logos_hero_logos",
+  "info": {
+    "displayName": "hero_logo"
+  },
+  "options": {},
+  "attributes": {
+    "logoImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

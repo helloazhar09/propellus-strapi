@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "otas",
+  "info": {
+    "singularName": "ota",
+    "pluralName": "otas",
+    "displayName": "OTAs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "component",
+      "component": "hero.hero-section",
+      "repeatable": false
+    },
+    "features": {
+      "type": "component",
+      "component": "features.features",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}

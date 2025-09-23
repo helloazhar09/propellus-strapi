@@ -46,6 +46,19 @@ export interface BenefitsBenefitsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface CardsCard extends Struct.ComponentSchema {
+  collectionName: 'components_cards_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    desc: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface DummyFaqsFaqs extends Struct.ComponentSchema {
   collectionName: 'components_dummy_faqs_faqs';
   info: {
@@ -65,6 +78,23 @@ export interface FeatureFeatureSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Blocks & Schema.Attribute.Required;
     heading: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface FeaturesFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_features_features';
+  info: {
+    displayName: 'features';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String & Schema.Attribute.Required;
+    buttonUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    cards: Schema.Attribute.Component<'cards.card', true> &
+      Schema.Attribute.Required;
+    desc: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heading: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    intro: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -88,6 +118,20 @@ export interface HeroSectionHerosection extends Struct.ComponentSchema {
   attributes: {
     heading1: Schema.Attribute.String & Schema.Attribute.Required;
     heading2: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HeroHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_hero_hero_sections';
+  info: {
+    displayName: 'heroSection';
+  };
+  attributes: {
+    desc: Schema.Attribute.String & Schema.Attribute.Required;
+    intro: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    logos: Schema.Attribute.Component<'logos.hero-logo', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -265,6 +309,19 @@ export interface LandingPageVisasection extends Struct.ComponentSchema {
   attributes: {
     heading: Schema.Attribute.String & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface LogosHeroLogo extends Struct.ComponentSchema {
+  collectionName: 'components_logos_hero_logos';
+  info: {
+    displayName: 'hero_logo';
+  };
+  attributes: {
+    logoImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
       Schema.Attribute.Required;
   };
 }
@@ -562,10 +619,13 @@ declare module '@strapi/strapi' {
       'about-us.hero-section': AboutUsHeroSection;
       'advisors-section.advisors': AdvisorsSectionAdvisors;
       'benefits.benefits-section': BenefitsBenefitsSection;
+      'cards.card': CardsCard;
       'dummy-faqs.faqs': DummyFaqsFaqs;
       'feature.feature-section': FeatureFeatureSection;
+      'features.features': FeaturesFeatures;
       'hero-section.hero': HeroSectionHero;
       'hero-section.herosection': HeroSectionHerosection;
+      'hero.hero-section': HeroHeroSection;
       'investor-approach.approachsection': InvestorApproachApproachsection;
       'investors-page.approach-section': InvestorsPageApproachSection;
       'investors-page.investors': InvestorsPageInvestors;
@@ -579,6 +639,7 @@ declare module '@strapi/strapi' {
       'landing-page.otas-service': LandingPageOtasService;
       'landing-page.travellers-love': LandingPageTravellersLove;
       'landing-page.visasection': LandingPageVisasection;
+      'logos.hero-logo': LogosHeroLogo;
       'logos.logos': LogosLogos;
       'mainheading.mainheading': MainheadingMainheading;
       'meet-the-team.meet-the-team': MeetTheTeamMeetTheTeam;

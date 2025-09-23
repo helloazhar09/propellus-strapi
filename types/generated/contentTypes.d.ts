@@ -515,6 +515,33 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOtaOta extends Struct.SingleTypeSchema {
+  collectionName: 'otas';
+  info: {
+    displayName: 'OTAs';
+    pluralName: 'otas';
+    singularName: 'ota';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    features: Schema.Attribute.Component<'features.features', false> &
+      Schema.Attribute.Required;
+    heroSection: Schema.Attribute.Component<'hero.hero-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::ota.ota'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTermsOfServiceTermsOfService
   extends Struct.CollectionTypeSchema {
   collectionName: 'terms_of_services';
@@ -1111,6 +1138,7 @@ declare module '@strapi/strapi' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::investor.investor': ApiInvestorInvestor;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::ota.ota': ApiOtaOta;
       'api::terms-of-service.terms-of-service': ApiTermsOfServiceTermsOfService;
       'api::travelagent.travelagent': ApiTravelagentTravelagent;
       'plugin::content-releases.release': PluginContentReleasesRelease;

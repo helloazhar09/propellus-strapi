@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_hero_hero_sections",
+  "info": {
+    "displayName": "heroSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "blocks",
+      "required": true
+    },
+    "intro": {
+      "type": "blocks",
+      "required": true
+    },
+    "desc": {
+      "type": "string",
+      "required": true
+    },
+    "logos": {
+      "type": "component",
+      "component": "logos.hero-logo",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}
