@@ -21,6 +21,24 @@
       "component": "features.features",
       "repeatable": false,
       "required": true
+    },
+    "fairSection": {
+      "type": "component",
+      "component": "section.fair-adventure",
+      "repeatable": false,
+      "required": false
+    },
+    "visaIntegration_section1": {
+      "type": "component",
+      "component": "section.fair-adventure",
+      "repeatable": false,
+      "required": true
+    },
+    "VisaApi": {
+      "type": "component",
+      "component": "api-section.visa-integration-api",
+      "repeatable": false,
+      "required": true
     }
   }
 }

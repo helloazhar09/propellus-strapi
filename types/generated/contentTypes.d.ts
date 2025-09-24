@@ -529,6 +529,7 @@ export interface ApiOtaOta extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    fairSection: Schema.Attribute.Component<'section.fair-adventure', false>;
     features: Schema.Attribute.Component<'features.features', false> &
       Schema.Attribute.Required;
     heroSection: Schema.Attribute.Component<'hero.hero-section', false>;
@@ -539,6 +540,16 @@ export interface ApiOtaOta extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    VisaApi: Schema.Attribute.Component<
+      'api-section.visa-integration-api',
+      false
+    > &
+      Schema.Attribute.Required;
+    visaIntegration_section1: Schema.Attribute.Component<
+      'section.fair-adventure',
+      false
+    > &
+      Schema.Attribute.Required;
   };
 }
 

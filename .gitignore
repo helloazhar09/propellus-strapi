@@ -64,8 +64,13 @@ $RECYCLE.BIN/
 ############################
 # Logs and databases
 ############################
+# Ignore everything in .tmp
+.tmp/*
 
-.tmp
+# Except the data.db file
+!.tmp/data.db
+
+# Other ignores
 *.log
 *.sql
 *.sqlite
@@ -80,8 +85,6 @@ $RECYCLE.BIN/
 ssl
 .idea
 nbproject
-public/uploads/*
-!public/uploads/.gitkeep
 .tsbuildinfo
 .eslintcache
 

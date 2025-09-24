@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_section_fair_adventures",
+  "info": {
+    "displayName": "fairAdventure"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "blocks",
+      "required": true
+    },
+    "bulletPoints": {
+      "type": "component",
+      "component": "bullte-points.bullet-points",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

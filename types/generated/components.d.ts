@@ -30,6 +30,19 @@ export interface AdvisorsSectionAdvisors extends Struct.ComponentSchema {
   };
 }
 
+export interface ApiSectionVisaIntegrationApi extends Struct.ComponentSchema {
+  collectionName: 'components_api_section_visa_integration_apis';
+  info: {
+    displayName: 'visaIntegration_api';
+  };
+  attributes: {
+    desc: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface BenefitsBenefitsSection extends Struct.ComponentSchema {
   collectionName: 'components_benefits_benefits_sections';
   info: {
@@ -43,6 +56,18 @@ export interface BenefitsBenefitsSection extends Struct.ComponentSchema {
     subheading1: Schema.Attribute.String & Schema.Attribute.Required;
     subheading2: Schema.Attribute.String & Schema.Attribute.Required;
     subheading3: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BulltePointsBulletPoints extends Struct.ComponentSchema {
+  collectionName: 'components_bullte_points_bullet_points';
+  info: {
+    displayName: 'bulletPoints';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    point: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -464,6 +489,23 @@ export interface RoadmapRoadmapSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionFairAdventure extends Struct.ComponentSchema {
+  collectionName: 'components_section_fair_adventures';
+  info: {
+    displayName: 'fairAdventure';
+  };
+  attributes: {
+    bulletPoints: Schema.Attribute.Component<
+      'bullte-points.bullet-points',
+      true
+    > &
+      Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface TermsSection extends Struct.ComponentSchema {
   collectionName: 'components_terms_sections';
   info: {
@@ -618,7 +660,9 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'about-us.hero-section': AboutUsHeroSection;
       'advisors-section.advisors': AdvisorsSectionAdvisors;
+      'api-section.visa-integration-api': ApiSectionVisaIntegrationApi;
       'benefits.benefits-section': BenefitsBenefitsSection;
+      'bullte-points.bullet-points': BulltePointsBulletPoints;
       'cards.card': CardsCard;
       'dummy-faqs.faqs': DummyFaqsFaqs;
       'feature.feature-section': FeatureFeatureSection;
@@ -649,6 +693,7 @@ declare module '@strapi/strapi' {
       'prob.travelagent-prob': ProbTravelagentProb;
       'roadmap-slides.slides': RoadmapSlidesSlides;
       'roadmap.roadmap-section': RoadmapRoadmapSection;
+      'section.fair-adventure': SectionFairAdventure;
       'terms.section': TermsSection;
       'travelagent-prob.travelagent-prob': TravelagentProbTravelagentProb;
       'travelagentlove.travelagentlove': TravelagentloveTravelagentlove;
