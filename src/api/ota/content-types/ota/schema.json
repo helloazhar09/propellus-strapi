@@ -39,6 +39,16 @@
       "component": "api-section.visa-integration-api",
       "repeatable": false,
       "required": true
+    },
+    "metrics": {
+      "type": "component",
+      "component": "metrics.metrics",
+      "repeatable": false
+    },
+    "contactForm": {
+      "type": "component",
+      "component": "hero.hero-section",
+      "repeatable": false
     }
   }
 }

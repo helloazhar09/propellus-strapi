@@ -526,6 +526,7 @@ export interface ApiOtaOta extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    contactForm: Schema.Attribute.Component<'hero.hero-section', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -536,6 +537,7 @@ export interface ApiOtaOta extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::ota.ota'> &
       Schema.Attribute.Private;
+    metrics: Schema.Attribute.Component<'metrics.metrics', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

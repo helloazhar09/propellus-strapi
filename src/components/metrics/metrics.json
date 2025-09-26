@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_metrics_metrics",
+  "info": {
+    "displayName": "metrics"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "intro": {
+      "type": "blocks",
+      "required": true
+    },
+    "cards": {
+      "type": "component",
+      "component": "cards.metric-cards",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

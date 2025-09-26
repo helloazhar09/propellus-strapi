@@ -84,6 +84,17 @@ export interface CardsCard extends Struct.ComponentSchema {
   };
 }
 
+export interface CardsMetricCards extends Struct.ComponentSchema {
+  collectionName: 'components_cards_metric_cards';
+  info: {
+    displayName: 'metric_cards';
+  };
+  attributes: {
+    desc: Schema.Attribute.String & Schema.Attribute.Required;
+    percentage: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface DummyFaqsFaqs extends Struct.ComponentSchema {
   collectionName: 'components_dummy_faqs_faqs';
   info: {
@@ -392,6 +403,19 @@ export interface MeetTheTeamMeetTheTeam extends Struct.ComponentSchema {
   };
 }
 
+export interface MetricsMetrics extends Struct.ComponentSchema {
+  collectionName: 'components_metrics_metrics';
+  info: {
+    displayName: 'metrics';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'cards.metric-cards', true> &
+      Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    intro: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface MissionSectionMissionSection extends Struct.ComponentSchema {
   collectionName: 'components_mission_section_mission_sections';
   info: {
@@ -664,6 +688,7 @@ declare module '@strapi/strapi' {
       'benefits.benefits-section': BenefitsBenefitsSection;
       'bullte-points.bullet-points': BulltePointsBulletPoints;
       'cards.card': CardsCard;
+      'cards.metric-cards': CardsMetricCards;
       'dummy-faqs.faqs': DummyFaqsFaqs;
       'feature.feature-section': FeatureFeatureSection;
       'features.features': FeaturesFeatures;
@@ -687,6 +712,7 @@ declare module '@strapi/strapi' {
       'logos.logos': LogosLogos;
       'mainheading.mainheading': MainheadingMainheading;
       'meet-the-team.meet-the-team': MeetTheTeamMeetTheTeam;
+      'metrics.metrics': MetricsMetrics;
       'mission-section.mission-section': MissionSectionMissionSection;
       'mission-vision.mission-vision-section': MissionVisionMissionVisionSection;
       'our-team-and-advisors.our-team-and-advisors': OurTeamAndAdvisorsOurTeamAndAdvisors;
