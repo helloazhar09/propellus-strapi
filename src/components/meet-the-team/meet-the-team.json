@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_meet_the_team_meet_the_teams",
+  "info": {
+    "displayName": "meet the team"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "designation": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

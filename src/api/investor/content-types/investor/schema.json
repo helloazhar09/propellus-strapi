@@ -20,7 +20,7 @@
       "type": "component",
       "component": "investor-approach.approachsection",
       "repeatable": false,
-      "required": true
+      "required": false
     },
     "investorsheading": {
       "type": "component",
@@ -31,7 +31,7 @@
       "type": "component",
       "component": "investors-page.investors-section",
       "repeatable": true,
-      "required": true
+      "required": false
     },
     "form": {
       "type": "component",

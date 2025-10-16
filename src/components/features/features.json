@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_features_features",
+  "info": {
+    "displayName": "features"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "heading": {
+      "type": "blocks",
+      "required": true
+    },
+    "intro": {
+      "type": "blocks",
+      "required": true
+    },
+    "cards": {
+      "type": "component",
+      "component": "cards.card",
+      "repeatable": true,
+      "required": true
+    },
+    "desc": {
+      "type": "blocks",
+      "required": true
+    },
+    "buttonText": {
+      "type": "string",
+      "required": true
+    },
+    "buttonUrl": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

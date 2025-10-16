@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "otas",
+  "info": {
+    "singularName": "ota",
+    "pluralName": "otas",
+    "displayName": "OTAs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "component",
+      "component": "hero.hero-section",
+      "repeatable": false
+    },
+    "features": {
+      "type": "component",
+      "component": "features.features",
+      "repeatable": false,
+      "required": true
+    },
+    "fairSection": {
+      "type": "component",
+      "component": "section.fair-adventure",
+      "repeatable": false,
+      "required": false
+    },
+    "visaIntegration_section1": {
+      "type": "component",
+      "component": "section.fair-adventure",
+      "repeatable": false,
+      "required": true
+    },
+    "VisaApi": {
+      "type": "component",
+      "component": "api-section.visa-integration-api",
+      "repeatable": false,
+      "required": true
+    },
+    "metrics": {
+      "type": "component",
+      "component": "metrics.metrics",
+      "repeatable": false
+    },
+    "contactForm": {
+      "type": "component",
+      "component": "hero.hero-section",
+      "repeatable": false
+    }
+  }
+}

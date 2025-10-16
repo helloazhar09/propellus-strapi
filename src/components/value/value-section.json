@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_value_value_sections",
+  "info": {
+    "displayName": "value_section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "value_slides": {
+      "type": "component",
+      "component": "value-slides.slides",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,67 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About Us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "aboutUs_heroSection": {
+      "type": "component",
+      "component": "about-us.hero-section",
+      "repeatable": true,
+      "required": false
+    },
+    "mission_section": {
+      "type": "component",
+      "component": "mission-section.mission-section",
+      "repeatable": true
+    },
+    "vision_section": {
+      "type": "component",
+      "component": "vision-section.vision-section",
+      "repeatable": true,
+      "required": true
+    },
+    "meet_the_team": {
+      "type": "component",
+      "component": "meet-the-team.meet-the-team",
+      "repeatable": true,
+      "required": true
+    },
+    "our_team_and_advisors": {
+      "type": "component",
+      "component": "our-team-and-advisors.our-team-and-advisors",
+      "repeatable": false,
+      "required": true
+    },
+    "value": {
+      "type": "component",
+      "component": "value.value-section",
+      "repeatable": true,
+      "required": true
+    },
+    "roadmap": {
+      "type": "component",
+      "component": "roadmap.roadmap-section",
+      "repeatable": true,
+      "required": true
+    },
+    "creatingPropellusValues": {
+      "type": "component",
+      "component": "values.creating-propellus-values",
+      "repeatable": true,
+      "required": true
+    },
+    "logos": {
+      "type": "component",
+      "component": "logos.logos",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_values_creating_propellus_values",
+  "info": {
+    "displayName": "creating_propellus_values"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}

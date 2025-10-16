@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_bullte_points_bullet_points",
+  "info": {
+    "displayName": "bulletPoints"
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "blocks",
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

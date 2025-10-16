@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_our_team_and_advisors_our_team_and_advisors",
+  "info": {
+    "displayName": "our_team_and_advisors"
+  },
+  "options": {},
+  "attributes": {
+    "intro": {
+      "type": "blocks",
+      "required": true
+    },
+    "team_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "advisor_heading": {
+      "type": "string",
+      "required": true
+    },
+    "advisors": {
+      "type": "component",
+      "component": "advisors-section.advisors",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

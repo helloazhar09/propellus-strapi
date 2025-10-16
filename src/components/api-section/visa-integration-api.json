@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_api_section_visa_integration_apis",
+  "info": {
+    "displayName": "visaIntegration_api"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}
