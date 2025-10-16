@@ -36,6 +36,11 @@
       "type": "component",
       "component": "landing-page.travellers-love",
       "repeatable": true
+    },
+    "travellers": {
+      "type": "component",
+      "component": "landing-page.travellers",
+      "repeatable": true
     }
   }
 }

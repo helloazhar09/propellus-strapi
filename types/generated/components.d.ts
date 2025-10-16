@@ -211,6 +211,18 @@ export interface LandingPageOtasService extends Struct.ComponentSchema {
   };
 }
 
+export interface LandingPageTravellers extends Struct.ComponentSchema {
+  collectionName: 'components_landing_page_travellers';
+  info: {
+    displayName: 'travellers';
+  };
+  attributes: {
+    country: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    travellername: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface LandingPageTravellersLove extends Struct.ComponentSchema {
   collectionName: 'components_landing_page_travellers_loves';
   info: {
@@ -359,6 +371,7 @@ declare module '@strapi/strapi' {
       'landing-page.grow-your-business-section': LandingPageGrowYourBusinessSection;
       'landing-page.herosection': LandingPageHerosection;
       'landing-page.otas-service': LandingPageOtasService;
+      'landing-page.travellers': LandingPageTravellers;
       'landing-page.travellers-love': LandingPageTravellersLove;
       'landing-page.visasection': LandingPageVisasection;
       'mainheading.mainheading': MainheadingMainheading;

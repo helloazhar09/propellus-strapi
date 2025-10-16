@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_landing_page_travellers",
+  "info": {
+    "displayName": "travellers"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "travellername": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

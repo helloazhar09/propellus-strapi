@@ -481,6 +481,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     otas: Schema.Attribute.Component<'landing-page.otas-service', true> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    travellers: Schema.Attribute.Component<'landing-page.travellers', true>;
     travllerslove: Schema.Attribute.Component<
       'landing-page.travellers-love',
       true
