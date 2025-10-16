@@ -447,8 +447,7 @@ export interface ApiInvestorInvestor extends Struct.CollectionTypeSchema {
     approach: Schema.Attribute.Component<
       'investor-approach.approachsection',
       false
-    > &
-      Schema.Attribute.Required;
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -456,8 +455,7 @@ export interface ApiInvestorInvestor extends Struct.CollectionTypeSchema {
     investor: Schema.Attribute.Component<
       'investors-page.investors-section',
       true
-    > &
-      Schema.Attribute.Required;
+    >;
     investorsheading: Schema.Attribute.Component<
       'investors.investor-sec-text',
       true

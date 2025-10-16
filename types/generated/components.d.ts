@@ -152,8 +152,18 @@ export interface HeroSectionHerosection extends Struct.ComponentSchema {
     displayName: 'herosection';
   };
   attributes: {
+    button1: Schema.Attribute.String & Schema.Attribute.Required;
+    button2: Schema.Attribute.String & Schema.Attribute.Required;
     heading1: Schema.Attribute.String & Schema.Attribute.Required;
     heading2: Schema.Attribute.String & Schema.Attribute.Required;
+    icon1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    icon2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    icon3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    icon4: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
   };
 }
 
